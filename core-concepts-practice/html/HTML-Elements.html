@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>This is My Own Title-2</title>
+</head>
+<body>
+<!-- Normal Text -->
+This is my normal text
+
+<!-- This is text in paragraph -->
+<p title="Show this as title"> This is First Paragraph </p>
+
+<!-- Formatting -->
+<!-- Abbrevation -->
+I stay in 	<abbr title="Hyderabad">HYD</abbr>
+<!-- Bold Text -->
+<br>
+<center> I am In center of thr page </center>
+<b>	Defines bold text </b>
+<br>
+<u>	Defines text that should be stylistically different from normal text</u>
+<br>
+<i>	Defines a part of text in an alternate voice or mood</i>
+<br>
+<mark>	Defines marked/highlighted text</mark>
+<br>
+<sub>	Defines subscripted text</sub>
+<br>
+<sup>	Defines superscripted text</sup>
+<br>
+<br>
+<em>Emphasized text</em><br>
+<strong>Strong text</strong><br>
+<del>	Defines text that has been deleted from a document</del>
+<br>
+<p>
+First Line in pre tag
+			Second Line in pre tag
+		Third Line in pre tag
+				Fourth Line in pre tag
+</p>
+<pre>	
+		First Line in pre tag
+			Second Line in pre tag
+		Third Line in pre tag
+				Fourth Line in pre tag
+</pre>
+<br>				
+<code>
+	System.out.println("This is JAVA");
+	cout<<"This is C++";
+	println("This is C language");
+</code>
+<samp>Sample output from a computer program</samp><br>
+<kbd>Keyboard input</kbd><br>
+<var>Variable</var>
+<!-- This will draw a horizontal line -->
+<hr>
+<center> Images </center>
+<hr>
+<img></img>
+<img src="smiley.gif" width="145" height="126" alt="Show this when img not found"/>
+
+<a href="sun.html">Take me to Sun</a>
+
+<a href="sun.html"> <img src="smiley.gif" width="145" height="126" alt="Show this when img not found"/>  </a>
+
+
+<p>Click on the sun or on one of the planets to watch it closer:</p>
+
+<img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.html">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="mercur.html">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="venus.html">
+</map>
+
+<hr>
+<center> Lists </center>
+<hr>
+<h4>An Unordered List:</h4>
+<ul>
+  <li><a href="sun.html"><img src="smiley.gif" alt="Show this when img not found"/></a></li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<br>
+
+<h4>Ordered List:</h4>
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+
+<ol start="50">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+<br>
+<!-- Description list -->
+<h4>Description list</h4>
+<dl>
+  <dt>Coffee</dt>
+  <dd>Black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+<br>
+
+<hr>
+<center> Tables </center>
+<hr>
+
+<table border="1px">
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+    <tr>
+    <th>Second row head 1</th>
+    <th>Second row head 2</th>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+      <td>Sum</td>
+      <td>$180</td>
+    </tr>
+  </tfoot>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+
+<table border="2px">
+<thead>
+<tr>
+<th> A * B = </th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 1 * 2 = </td>
+<td>2</td>
+</tr>
+
+<tr>
+<td> 2 * 2 = </td>
+<td>4</td>
+</tr>
+<tr>
+<td> 3 * 2 = </td>
+<td>6</td>
+</tr>
+<tr>
+<td> 4 * 2 = </td>
+<td>8</td>
+</tr>
+</tbody>
+
+</table>
+
+<hr>
+<center> Forms </center>
+<hr>
+
+<form action="nextForm.html">
+First name: <input type="text" name="FirstName" value="Mickey"><br>
+Last name: <input type="text" name="LastName" value="Mouse"><br>
+<br>
+<textarea rows="4" cols="50">
+This is Text area where you can type more number of words
+</textarea>
+<br>
+Select Movie Name : 
+<select>
+  <option value="volvo">Option 1</option>
+  <option value="saab">Option 2</option>
+  <option value="opel">Option 3</option>
+  <option value="audi">Option 4</option>
+</select>
+<br>
+<input type="button" value="Click me">
+<input type="submit" value="Submit">
+</form>
+
+<p>Click the "Submit" button and the form-data will be sent to second page.</p>
+
+</body>
+</html>

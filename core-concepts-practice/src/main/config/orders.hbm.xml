@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.myjavapapers.beans.Orders" table="orders">
+		<id name="orderId" type="int" column="id"></id>
+		<property name="orderDate" type="java.util.Date" column="ord_date" />
+		<property name="orderAmount" column="amount" type="int" />
+		<property name="customerId" type="int" column="customer_id"></property>
+	</class>
+</hibernate-mapping>

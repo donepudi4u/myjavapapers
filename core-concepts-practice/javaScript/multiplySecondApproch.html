@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 1b</title>
+<meta charset="UTF-8">
+<script  src="multiplyScript.js"></script>
+</head>
+<body>
+	<h1>Multiplication Demo</h1>
+	<p>Enter the Multiplication Number and Range</p>
+	<p>Reload the page to enter new Multiplication table number and
+		range</p>
+	<script>
+		var mulNum = window
+				.prompt("Please enter the Multiplication table number");
+		if (isNaN(mulNum) == false) {
+			var range = window.prompt("Please enter the Range of the Multiplication");
+			if (isNaN(range) == false) {
+				triArea(mulNum, range);
+			} else {
+				window.alert("invalid Input. Please reload to try again");
+			}
+		} else {
+			window.alert("Invalid Input. Please Reload to try again");
+		}
+	</script>
+</body>
+</html>

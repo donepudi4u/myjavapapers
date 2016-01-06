@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment 1b</title>
+<meta charset="UTF-8">
+<script type="text/javascript">
+	function multiply(mulNum, range) {
+		document.write("<table border='1px'>");
+		document.write("<thead>");
+		document.write("<tr><th>A * B</th>");
+		document.write("<th>Result</th></tr>");
+		document.write("</thead>");
+		document.write("<tbody>");
+		var area;
+	/* 	while(i <= range){
+			document.write("<tr><td>" + i + " * " + mulNum + " = </td>");
+			document.write("<td>" + (i * mulNum) + "</td>");
+			document.write("</tr>");
+			i++;
+		} */
+		for (var i = 0; i <= range; i++) {
+			document.write("<tr><td>" + i + " * " + mulNum + " = </td>");
+			document.write("<td>" + (i * mulNum) + "</td>");
+			document.write("</tr>");
+		}
+		document.write("</tbody></table>");
+	}
+</script>
+</head>
+<body>
+	<h1>Multiplication Demo</h1>
+	<p>Enter the Multiplication Number and Range</p>
+	<p>Reload the page to enter new Multiplication table number and
+		range</p>
+		
+		<table border='1px'>
+		
+		</table>
+	<script>
+		var mulNum = window.prompt("Please enter the Multiplication table number");
+		if (isNaN(mulNum) == false) {
+			var range = window.prompt("Please enter the Range of the Multiplication");
+			if (isNaN(range) == false) {
+				multiply(mulNum, range);
+			} else {
+				window.alert("invalid Input. Please reload to try again");
+			}
+		} else {
+			window.alert("Invalid Input. Please Reload to try again");
+		}
+	</script>
+</body>
+</html>

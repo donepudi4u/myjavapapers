@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Website</title>
+<script src="../javaScript/loginRules.js"></script>
+</head>
+<!-- background-image: url(smiley.gif); -->
+<body style="background-color:cyan;">
+	<form action="loginSuccessPage.html" onsubmit="return checkLogin(this);">
+	<!-- text-align: center;
+		text-decoration: underline;
+		text-transform: capitalize;
+	 -->
+		<p style="color:green;text-transform: capitalize;">
+			Username: <input type="text" name="username">
+		</p>
+		<p style="color:blue;">
+			Password: <input type="password" name="pwd1">
+		</p>
+		<p>
+			<input type="submit">
+		</p>
+	</form>
+</body>
+</html>
+<!-- onClick="validate(this.form.userName.value,this.form.passWord)" -->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function checkForm(form) {
+		if (form.username.value == "") {
+			alert("Error: Username cannot be blank!");
+			form.username.focus();
+			return false;
+		}
+		if (form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+			if (form.pwd1.value.length < 6) {
+				alert("Error: Password must contain at least six characters!");
+				form.pwd1.focus();
+				return false;
+			}
+			if (form.pwd1.value == form.username.value) {
+				alert("Error: Password must be different from Username!");
+				form.pwd1.focus();
+				return false;
+			}
+		} else {
+			alert("Error: Please check that you've entered and confirmed your password!");
+			form.pwd1.focus();
+			return false;
+		}
+
+		alert("You entered a valid password: " + form.pwd1.value);
+		return true;
+	}
+</script>
+
+</head>
+<body>
+	<form onsubmit="return checkForm(this);">
+		<p>
+			Username: <input type="text" name="username">
+		</p>
+		<p>
+			Password: <input type="password" name="pwd1">
+		</p>
+		<p>
+			Confirm Password: <input type="password" name="pwd2">
+		</p>
+		<p>
+			<input type="submit">
+		</p>
+	</form>
+</body>
+</html>
+<!-- onClick="validate(this.form.userName.value,this.form.passWord)" -->

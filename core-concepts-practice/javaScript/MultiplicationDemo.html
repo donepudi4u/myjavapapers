@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Multiplication table</title>
+<script>
+function multiply(tableNumber,calLimit){
+	document.write(<table>);
+	document.write(<thead>); 
+	document.write(<tr><th>A * B</th></tr>);
+	document.write(<tr><th>Result</th></tr>);
+	document.write(</thead>);
+	document.write(</table>);
+	for (var i=1;i<calLimit;i++){
+		document.write();
+	}
+	
+}
+
+</script>
+
+</head>
+<body>
+<form action="displayResults.html" onSubmit="multiply()">
+<center>
+<p align="center" > Multiplication Table Number : </p> <input type="text" name="tableNumber"/> 
+<br>
+<p align="center" >Result Limit : </p> <input type="text" name="calculationLimt"/> 
+<br><br>
+<input type="submit" name="multipleButton" value="Get Table Values"></button>
+</center>
+
+
+
+
+</form>
+</body>
+</html>
