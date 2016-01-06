@@ -22,6 +22,10 @@ public class Country {
 	public void setContinent(String continent) {
 		this.continent = continent;
 	}
-	
+	@Override
+	public String toString() {
+		return "Country [code=" + code + ", name=" + name + ", continent="
+				+ continent + "]";
+	}
 
 }
