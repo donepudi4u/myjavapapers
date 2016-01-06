@@ -33,4 +33,12 @@ public class Orders {
 		this.customerId = customerId;
 	}
 	
+	@Override
+	public String toString() {
+		return "Orders [orderId=" + orderId + ", orderDate=" + orderDate
+				+ ", orderAmount=" + orderAmount + ", customerId=" + customerId
+				+ "]";
+	}
+	
+	
 }
