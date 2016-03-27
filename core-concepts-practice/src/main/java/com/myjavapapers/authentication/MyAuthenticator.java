@@ -1,0 +1,19 @@
+package com.myjavapapers.authentication;
+
+import java.net.Authenticator;
+import java.net.PasswordAuthentication;
+
+public class MyAuthenticator extends Authenticator {  
+    private static String username = "donepudi4u";
+    private static String password = "D@ne9ud11985";
+
+    protected PasswordAuthentication getPasswordAuthentication() {
+        return new PasswordAuthentication (MyAuthenticator.username, 
+                MyAuthenticator.password.toCharArray());
+    }
+
+    public static void setPasswordAuthentication(String username, String password) {
+        MyAuthenticator.username = username;
+        MyAuthenticator.password = password;
+    }
+}
