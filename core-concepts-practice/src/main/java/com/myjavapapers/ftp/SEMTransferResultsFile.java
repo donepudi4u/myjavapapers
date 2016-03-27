@@ -84,7 +84,7 @@ public class SEMTransferResultsFile extends ProcessFlow {
         @SourceRef("transferFile")
         @Override
         public Object execute(Object input, final i18n.slf4j.I18NLogger logger) throws Exception {
-            //ToolLot lot = (ToolLot)input;
+            ToolLot lot = (ToolLot)input;
            Vars var =  (Vars)input;
             FTPClientConfig config = new FTPClientConfig();
             FTPClient client = new FTPClient();

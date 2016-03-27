@@ -1,4 +1,4 @@
-package tool.semvision;
+/*package tool.semvision;
 
 import automation.flows.statemachine.ToolLot;
 import i18n.slf4j.I18NLogger;
@@ -99,7 +99,7 @@ public class SEMTransferResults extends ProcessFlow {
 		private FTPFile getRequiredFilesFromSEMSystem(FTPFile remoteSEMFile, String searchString) {
 			FTPFile localFile = null;
 			if (remoteSEMFile != null) {  //J94333.1  - need to replace this
-			    if (/*remoteSEMFile.getName().startsWith(searchString) && */ remoteSEMFile.getName().contains(".prn")) {
+			    if (remoteSEMFile.getName().startsWith(searchString) &&  remoteSEMFile.getName().contains(".prn")) {
 			        if (localFile == null || localFile.getTimestamp().before(remoteSEMFile.getTimestamp())) {
 			            localFile = remoteSEMFile;
 			        }
@@ -204,3 +204,4 @@ public class SEMTransferResults extends ProcessFlow {
     }
 
 }
+*/

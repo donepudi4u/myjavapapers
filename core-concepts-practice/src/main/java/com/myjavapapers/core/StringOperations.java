@@ -1,5 +1,7 @@
 package com.myjavapapers.core;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -8,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.StringTokenizer;
+
+import org.apache.commons.lang.StringUtils;
 
 public class StringOperations {
 	
@@ -18,9 +22,43 @@ public class StringOperations {
 		// stringOperations.printRepeats(strValue);
 		//System.out.println(printRepeats);
 		//stringOperations.sortNumbers();
-		
-		stringOperations.printWordsInReverseOrder(strValue);
+		// http://10.32.8.22/FAB/STR.nsf/0/044315bf610aae6e8825689d0003a73d/STR_INSTRUCTION/0.D84.jpg
+		//stringOperations.printWordsInReverseOrder(strValue);
+		try {
+			buildImageURL("http", "10.32.8.22", "/FAB/STR.nsf/0/044315bf610aae6e8825689d0003a73d/STR_INSTRUCTION/0.D84?OpenElement&amp;FieldElemFormat=jpg");
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
 	}
+	
+	private static String buildImageURL(String protocal, String host, String sourceUrl) throws MalformedURLException {
+        URL imageUrl = new URL(protocal + "://" + host + "/" + sourceUrl);
+
+        //   System.out.println("Image path [ " + imageUrl.getPath() + " ]");
+        //    System.out.println("Image Query params [ " + imageUrl.getQuery() + " ]");
+        String query = imageUrl.getQuery();
+
+        String[] imageFormat = query.split("=");
+        if (imageFormat != null && imageFormat.length > 0) {
+            //        System.out.println("Image Format " + imageFormat[1]);
+        }
+        String imagePath = imageUrl.getPath();
+        System.out.println("imagePath : "+ imagePath);
+        int count = StringUtils.countMatches(imagePath, "/");
+       // System.out.println("----" +StringUtils.ordinalIndexOf(imagePath, "/", count-1));
+        System.out.println(imagePath.substring(StringUtils.ordinalIndexOf(imagePath, "/", count-1)+1, StringUtils.lastIndexOf(imagePath, "/")));
+        String imageName = imagePath.substring(StringUtils.lastIndexOf(imagePath, "/"), imagePath.length());
+        String newPath = imagePath.substring(1, StringUtils.lastIndexOf(imagePath, "/")) + imageName + "." + imageFormat[1];
+        //   System.out.println("New Path" + newPath);
+        String imageURL = protocal + "://" + host + newPath;
+        System.out.println("New URL Built : " + imageURL);
+        
+        
+        int count = StringUtils.countMatches(imagePath, "/");
+         String iteamName = imagePath.substring(StringUtils.ordinalIndexOf(imagePath, "/", StringUtils.countMatches(imagePath, "/")-1)+1, StringUtils.lastIndexOf(imagePath, "/"));
+        return imageURL;
+    }
+	
 	
 	private void printFirstOccuranceOfRepeatCharactor(String inputString){
 		//char [] words = {'B','B','E','D','B','A','X'};
