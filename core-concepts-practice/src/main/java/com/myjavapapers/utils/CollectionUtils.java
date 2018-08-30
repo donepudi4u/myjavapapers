@@ -33,7 +33,7 @@ public class CollectionUtils {
 		System.out.println(map);
 	}
 	
-	private static void saveEmbeddedObject(DB cimAppsMongoDB,String fileName ) {
+	/*private static void saveEmbeddedObject(DB cimAppsMongoDB,String fileName ) {
         try {
             //   Mongo mongo = new Mongo(MongoConstants.MONGO_SERVER, MongoConstants.MONGO_PORT);
             // Logger.getLogger(STRsave.class.getName()).info(  "mongo instance done");
@@ -64,6 +64,6 @@ public class CollectionUtils {
             System.out.println("exception = " + e);
             Logger.getLogger(LotusNotes2Mongo.class.getName()).log(Level.SEVERE, null, e);
         }
-    }
+    }*/
 
 }

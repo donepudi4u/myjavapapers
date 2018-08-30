@@ -46,7 +46,7 @@ import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import lotus.domino.Database;
+/*import lotus.domino.Database;
 import lotus.domino.DateTime;
 import lotus.domino.Document;
 import lotus.domino.DocumentCollection;
@@ -58,7 +58,7 @@ import lotus.domino.NotesFactory;
 import lotus.domino.RichTextItem;
 import lotus.domino.Session;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.StringUtils;*/
 import org.apache.commons.net.util.Base64;
 import org.htmlparser.Parser;
 import org.htmlparser.filters.NodeClassFilter;
@@ -73,26 +73,26 @@ import org.xml.sax.SAXException;
  *
  * @author kudaraa
  */
-public class CopyFilesFromLotusnotesToMongoDB {
+public class CopyFilesFromLotusnotesToMongoDB {/*
 
-    /**
+    *//**
      * @param argv
      *
-     */
+     *//*
     public static void main(String argv[]) {
         try {
-            /**
+            *//**
              * Conneting to Mongo DB Dev
-             */
+             *//*
             Mongo mongoDBConnection = new Mongo(MongoConstants.MONGO_SERVER, MongoConstants.MONGO_PORT);
             DB cimAPPSMongoDb = mongoDBConnection.getDB("cimapps");
-            /**
+            *//**
              * Connection and session open with lotus notes.
-             */
+             *//*
             Session session = createOrOpenLotusNotesSession();
-            /**
+            *//**
              * Lotus notes DB session.
-             */
+             *//*
             Database lotusNotesDB = session.getDatabase("JAZ-DA1/Server/Jazz Semiconductor", "FAB/STR");
             //Database lotusNotesDB = session.getDatabase("localhost", "Jazz STR");
             System.out.println("Notes Version : " + session.getNotesVersion());
@@ -197,11 +197,11 @@ public class CopyFilesFromLotusnotesToMongoDB {
         return session;
     }
 
-    /**
+    *//**
      * @param cimAPPSMongoDb : Mongo DB Database Connection
      * @param stringBuilderStr
      * @param str_number
-     */
+     *//*
     private static void insertIntoMongoDB(DB cimAPPSMongoDb, StringBuilder stringBuilderStr, String str_number) {
         stringBuilderStr.append("}");
         String objstr = stringBuilderStr.toString();
@@ -497,11 +497,11 @@ public class CopyFilesFromLotusnotesToMongoDB {
         try {
             System.out.println("Proces Image start");
             // Third Approch -- Need to code 
-           /* DxlExporter dxlExporter =    session.createDxlExporter();
+            DxlExporter dxlExporter =    session.createDxlExporter();
              String documentExportername = dxlExporter.exportDxl(document);
              dxlExporter.setConvertNotesBitmapsToGIF(true);
              System.out.println("Document Exporter n/* DxlExporter dxlExporter =    session.createDxlExporter();
-             String documentExporternameame " + documentExportername);*/
+             String documentExporternameame " + documentExportername);
 
             // First Approch - XML
             String generateXML = document.generateXML();
@@ -571,7 +571,7 @@ public class CopyFilesFromLotusnotesToMongoDB {
     }
 
     private static void processImageUsingHTMLpage(Document document, Session session, Database lotusNotesDB) {
-        /* try {
+         try {
          System.out.println("PRocessing document as webpage start ");
          DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
          DocumentBuilder db = dbf.newDocumentBuilder();
@@ -588,7 +588,7 @@ public class CopyFilesFromLotusnotesToMongoDB {
          }
          } catch (NotesException | ParserConfigurationException | SAXException | IOException ex) {
          Logger.getLogger(CopyFilesFromLotusnotesToMongoDB.class.getName()).log(Level.SEVERE, null, ex);
-         }*/
+         }
         System.out.println("PRocessing document as webpage start ");
         Collection<String> imageUrls = new ArrayList<String>();
 
@@ -603,9 +603,9 @@ public class CopyFilesFromLotusnotesToMongoDB {
                 }
             });
            // URLConnection uc = uriLink.openConnection();
-           /* String userpass = "whitem" + ":" + "Pnot4u2";
+            String userpass = "whitem" + ":" + "Pnot4u2";
              String basicAuth = "Basic " + new String(new Base64().encode(userpass.getBytes()));
-             con.setRequestProperty("Authorization", basicAuth);*/
+             con.setRequestProperty("Authorization", basicAuth);
             con.connect();
            // uc.setRequestProperty("Authorization", basicAuth);
             //  InputStream in = uc.getInputStream();
@@ -662,4 +662,4 @@ public class CopyFilesFromLotusnotesToMongoDB {
             }
         }
     }
-}
+*/}

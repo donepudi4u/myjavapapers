@@ -1,5 +1,6 @@
 package com.myjavapapers.authentication;
 
+import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -9,11 +10,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.Collection;
+
+import javax.imageio.ImageIO;
 
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FilenameUtils;
@@ -103,8 +107,8 @@ int i =0 ;
 	    }
 	 
 	 public static void downloadImage(String sourceUrl, String targetDirectory) throws MalformedURLException, IOException, FileNotFoundException {
-	      //  URL imageUrl = new URL(sourceUrl);
-	        HttpURLConnection con = authenticateAndGetConnectionObject();
+//	        URL imageUrl = new URL(sourceUrl);
+	        HttpURLConnection con = authenticateAndGetConnectionObject(sourceUrl);
 	         //   String readStream = readStream(con.getInputStream());
 	        BufferedImage read = ImageIO.read(con.getInputStream());
 	        ImageIO.write(read, "jpg", new File("c:\\app\\image1.jpg"));

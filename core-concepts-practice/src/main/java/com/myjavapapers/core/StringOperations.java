@@ -54,7 +54,7 @@ public class StringOperations {
         System.out.println("New URL Built : " + imageURL);
         
         
-        int count = StringUtils.countMatches(imagePath, "/");
+        int count2 = StringUtils.countMatches(imagePath, "/");
          String iteamName = imagePath.substring(StringUtils.ordinalIndexOf(imagePath, "/", StringUtils.countMatches(imagePath, "/")-1)+1, StringUtils.lastIndexOf(imagePath, "/"));
         return imageURL;
     }

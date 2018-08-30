@@ -26,7 +26,7 @@ import java.util.Iterator;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import lotus.domino.Database;
+/*import lotus.domino.Database;
 import lotus.domino.DateTime;
 import lotus.domino.Document;
 import lotus.domino.DocumentCollection;
@@ -35,32 +35,32 @@ import lotus.domino.Item;
 import lotus.domino.NotesException;
 import lotus.domino.NotesFactory;
 import lotus.domino.RichTextItem;
-import lotus.domino.Session;
+import lotus.domino.Session;*/
 
 /**
  *
  * @author kudaraa
  */
-public class LotusNotesToMongoDB {
+public class LotusNotesToMongoDB {/*
 
-    /**
+    *//**
      * @param argv
      *
-     */
+     *//*
     public static void main(String argv[]) {
         try {
-            /**
+            *//**
              * Connetion to Mongo DB Dev
-             */
+             *//*
             Mongo mongoDBConnection = new Mongo(MongoConstants.MONGO_SERVER, MongoConstants.MONGO_PORT);
             DB cimAPPSMongoDb = mongoDBConnection.getDB("cimapps");
-            /**
+            *//**
              * Connection and session open with lotus notes.
-             */
+             *//*
             Session session = createOrOpenLotusNotesSession();
-            /**
+            *//**
              * Lotus notes DB session.
-             */
+             *//*
             Database lotusNotesDB = session.getDatabase("JAZ-DA1/Server/Jazz Semiconductor", "FAB/STR");
             //   StringBuilder stringBuilderStr = new StringBuilder();
             //Document document = null;
@@ -167,11 +167,11 @@ public class LotusNotesToMongoDB {
         return session;
     }
 
-    /**
+    *//**
      * @param cimAPPSMongoDb : Mongo DB Database Connection
      * @param stringBuilderStr
      * @param str_number
-     */
+     *//*
     private static void insertIntoMongoDB(DB cimAPPSMongoDb, StringBuilder stringBuilderStr, String str_number) {
         stringBuilderStr.append("}");
         String objstr = stringBuilderStr.toString();
@@ -291,20 +291,20 @@ public class LotusNotesToMongoDB {
             //ObjName.append(str_number).append("-").append(item.getName()).append("-").append(embObj.getName());
             ObjName.append(str_number).append("-").append(item.getName()).append("-").append(embeddedObjectSequence);
             
-            /**must test to see if the embedded object is a file that can be extracted*/
+            *//**must test to see if the embedded object is a file that can be extracted*//*
             embObj.extractFile(embededObjectsLocalPath);
-            /** Read File From local path and create GridFS File.*/
+            *//** Read File From local path and create GridFS File.*//*
             File docFile = new File(embededObjectsLocalPath);
             // create a "cimappsSTR" namespace
             GridFS gfscimapps = new GridFS(cimAppsMongoDB, "cimappsSTR1");
             // remove the image file from mongoDB
             // try query not on file name but on the id or use find for the _id
             //gfscimapps.remove(gfscimapps.findOne(ObjName.toString())); //this removes all previous GridFS entries even though it shouldnt
-            /** get doc file from local drive and insert to GridFS */
+            *//** get doc file from local drive and insert to GridFS *//*
             GridFSInputFile gfsFile = gfscimapps.createFile(docFile);
-            /** set a new filename for identify purpose*/
+            *//** set a new filename for identify purpose*//*
             gfsFile.setFilename(ObjName.toString());
-            /** save the image file into mongoDB*/
+            *//** save the image file into mongoDB*//*
             gfsFile.save();
             // get image file by it's filename
             GridFSDBFile imageForOutput = gfscimapps.findOne(ObjName.toString());
@@ -462,4 +462,4 @@ public class LotusNotesToMongoDB {
         return sb.toString();
     }
 
-}
+*/}

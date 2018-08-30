@@ -12,7 +12,7 @@ public class LotusNotesDBConnectionDemo {
 		
 	}
 	
-	public static void getHTMLConverter(Database thisdb, Document sourceDoc, String fieldName){
+	public static void getHTMLConverter(/*Database thisdb, Document sourceDoc, String fieldName*/){/*
 		
 		try {
 		Document createDocument = thisdb.createDocument();
@@ -25,6 +25,6 @@ public class LotusNotesDBConnectionDemo {
 			e.printStackTrace();
 		}
 		
-	}
+	*/}
 
 }

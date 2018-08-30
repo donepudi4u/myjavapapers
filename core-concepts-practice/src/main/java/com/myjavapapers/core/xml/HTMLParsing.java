@@ -83,7 +83,7 @@ public class HTMLParsing {
 			});
 			
 			URLConnection uc = uriLink.openConnection();
-			String userpass = username + ":" + password;
+			String userpass = "" + ":" + "";
 			String basicAuth = "Basic " + new String(new Base64().encode(userpass.getBytes()));
 			uc.setRequestProperty ("Authorization", basicAuth);
 			InputStream in = uc.getInputStream();

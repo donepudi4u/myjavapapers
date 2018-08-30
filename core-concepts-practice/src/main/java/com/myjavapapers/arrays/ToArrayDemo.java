@@ -1,7 +1,9 @@
 package com.myjavapapers.arrays;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.myjavapapers.beans.EmployeeBean;
-import com.myjavapapers.spring.model.Employee;
 
 public class ToArrayDemo {
 
